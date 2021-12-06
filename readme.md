@@ -41,8 +41,8 @@ from a Spring Boot application.
     exit
 ```
 
-4. Run publisher application, where the queue is declared
-5. Run subscriber application
+4. Run consumer application, where the queue and binding is declared
+5. Run producer application
 6. Enjoy your HA cluster
 
 ## Used technologies:

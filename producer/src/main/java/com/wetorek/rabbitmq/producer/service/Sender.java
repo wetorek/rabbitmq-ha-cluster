@@ -1,4 +1,4 @@
-package com.rabbitmq.producer.service;
+package com.wetorek.rabbitmq.producer.service;
 
 import com.wetorek.rabbitmq.cluster.Message;
 import lombok.RequiredArgsConstructor;
@@ -9,14 +9,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
-import static com.rabbitmq.producer.config.Config.DIRECT_EXCHANGE_NAME;
-import static com.rabbitmq.producer.config.Config.ROUTING_KEY;
+import static com.wetorek.rabbitmq.cluster.Consts.DIRECT_EXCHANGE_NAME;
 
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class Sender {
 
+    private static final String ROUTING_KEY = "test.routing.key";
     private final RabbitTemplate rabbitTemplate;
 
     @Scheduled(fixedRate = 3000L)
